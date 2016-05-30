@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'annotate', '~> 2.7'
 gem 'rails', '~> 4.2', '>= 4.2.6'
