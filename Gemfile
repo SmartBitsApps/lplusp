@@ -2,9 +2,19 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+# for authnetication
 gem 'devise', '~> 4.1', '>= 4.1.1'
+
+# for forms
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+# for images
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
+# for design
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootstrap-sass-extras', '~> 0.0.2'
+gem 'font-awesome-sass', '~> 4.6', '>= 4.6.2'
 
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'annotate', '~> 2.7'
