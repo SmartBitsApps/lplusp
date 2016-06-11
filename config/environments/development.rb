@@ -45,4 +45,7 @@ Rails.application.configure do
   
   # Devise
   config.action_mailer.default_url_options = { host: 'https://playground-smartbitsapps.c9users.io/' }
+  
+  # i18n translation change -> :cs
+  config.i18n.available_locales = :cs
 end

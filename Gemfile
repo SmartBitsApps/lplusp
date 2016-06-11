@@ -5,6 +5,10 @@ ruby '2.3.1'
 # for authnetication
 gem 'devise', '~> 4.1', '>= 4.1.1'
 
+# for translations
+gem 'devise-i18n'
+gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
+
 # for forms
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 

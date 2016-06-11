@@ -31,5 +31,8 @@ module Lplusp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # l18n translation settings
+    config.i18n.default_locale = :cs
   end
 end
