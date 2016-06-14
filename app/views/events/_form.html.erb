@@ -1,29 +1,19 @@
-<%= form_for @event, html: { multipart: true } do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "chyba") %> prohibited this event from being saved:</h2>
+<%= simple_form_for @event, html: { multipart: true, class: 'form-horizontal' }, wrapper: :horizontal_form, wrapper_mappings: { check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean } do |f| %>
 
-      <ul>
-      <% @event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <div class="form-inputs">  
+    <%= f.input :title, label: 'Název akce' %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :image_file_name %>
+    <div class="form-group string optional event_image_file_name">
+      <%= f.file_field :image, class: "btn btn-primary" %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-		<%= f.file_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    
+  <div class="form-group"> 
+    <div class='col-sm-offset-3 col-sm-9'>
+      <%= f.button :submit, class: 'btn-success' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  events_path, class: 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>
